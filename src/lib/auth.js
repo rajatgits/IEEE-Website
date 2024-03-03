@@ -12,7 +12,7 @@ const login = async (credentials) => {
 
     const user = await User.findOne({ email: credentials.email });
 
-    if (!user) {
+    if (!user || !user.password) {
       throw new Error("Invalid email");
     }
 
@@ -57,15 +57,11 @@ export const {
   ],
   callbacks: {
     async signIn({ user, account, profile }) {
-      console.log(profile);
       if (account.provider === "google") {
         try {
           connectToDb();
           const user = await User.findOne({ email: profile.email });
 
-          if (user && account.provider === "credentails") {
-            throw new Error("Email");
-          }
           if (!user) {
             const newUser = new User({
               username: profile.name,

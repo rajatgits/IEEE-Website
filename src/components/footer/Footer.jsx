@@ -7,7 +7,7 @@ export const Footer = () => {
     <div className={styles.container}>
       <div className={styles.socials}>
         <Link
-          href="https://www.linkedin.com/in/ieee-hit-student-barnch/"
+          href="https://www.linkedin.com/company/ieee-hit-student-branch/"
           className={styles.social}
           target="_blank"
         >
@@ -31,10 +31,21 @@ export const Footer = () => {
             height={18}
           />
         </Link>
-        <Link href="https://www.instagram.com/ieeehit/" target="_blank">
+        <Link href="https://www.facebook.com/ieeehit/" target="_blank">
           <Image
             src="/facebook.png"
             alt="Facebook icon"
+            width={18}
+            height={18}
+          />
+        </Link>
+        <Link
+          href="https://www.whatsapp.com/channel/0029VaMCE854SpkBsct9n12V"
+          target="_blank"
+        >
+          <Image
+            src="/whatsapp.png"
+            alt="Whatsapp icon"
             width={18}
             height={18}
           />
